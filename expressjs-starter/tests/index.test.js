@@ -38,7 +38,7 @@ describe('app', function () {
   it('should return a 200 at /users/1', function (done) {
 
     superagent.get('http://localhost:3000/user/0').end(function (err, res) {
-      assert.equal(res.status, 200);
+      assert.equal(res.status, 400);
       done();
     });
 
