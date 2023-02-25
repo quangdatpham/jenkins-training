@@ -28,7 +28,7 @@ describe('app', function () {
     superagent.get('http://localhost:3000/').end(function (err, res) {
       if (err) { return done(err); }
 
-      assert.equal(res.status, 200);
+      assert.equal(res.status, 400);
       assert.equal(res.text, 'Visit /user/0 or /users/0-2');
       done();
     });
